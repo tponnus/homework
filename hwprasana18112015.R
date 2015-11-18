@@ -1,3 +1,5 @@
+x<-matrix(1:240,24,10)
+x
 y<-(x[11:20, ])##To subset 11 to 20 and to print
 print(y)
 colMeans(y)## To calculate column mean for subset 11 to 20
@@ -8,3 +10,8 @@ colnames(column)<-c("8","9","10")##To rename column from 1 2 3 to 8 9 10
 print(column)
 colMeans(column)
 rowMeans(column)
+##using apply function
+apply(y,1,mean)## To calculate row mean for subset 11 to 20
+apply(y,2,mean)## To calculate column mean for subset 11 to 20
+apply(column,1,mean)
+apply(column,2,mean)
